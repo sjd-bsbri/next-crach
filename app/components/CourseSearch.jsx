@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from "react";
+import { FiSearch } from "react-icons/fi";
 
 const CourseSearch = ({ getSerachResults }) => {
   const [query, setQuery] = useState("");
@@ -11,19 +12,26 @@ const CourseSearch = ({ getSerachResults }) => {
     const courses = await res.json();
     getSerachResults(courses);
   };
+
   return (
-    <form onSubmit={handleSubmit} className="search-form">
-      <input
-        type="text"
-        className="search-input"
-        placeholder="Search Courses . . . "
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <button className="search-button" type="submit">
-        Search
-      </button>
-    </form>
+    <div className="search-container">
+      <form onSubmit={handleSubmit} className="search-form">
+        <div className="search-input-wrapper">
+          <FiSearch className="search-icon" />
+          <input
+            type="text"
+            className="search-input"
+            placeholder="Search courses by title, level, or description..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+        </div>
+        <button className="search-button" type="submit">
+          <FiSearch className="button-icon" />
+          Search
+        </button>
+      </form>
+    </div>
   );
 };
 
