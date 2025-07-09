@@ -3,7 +3,8 @@ import RepoDirs from "@/app/components/RepoDirs";
 import Link from "next/link";
 import React, { Suspense } from "react";
 
-const RepoPage = ({ params: { name } }) => {
+const RepoPage = async ({ params}) => {
+  const { name } = params;
   return (
     <div className="card">
       <Link href="/code/repos" className="btn btn-back">

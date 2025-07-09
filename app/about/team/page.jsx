@@ -51,7 +51,7 @@ const TeamPage = () => {
       name: "Priya Sharma",
       role: "Full Stack Developer",
       bio: "Priya is our versatile full stack developer, expertly bridging frontend and backend technologies to build seamless web applications from end to end. Her ability to navigate both client-side and server-side challenges makes her an invaluable asset to any project.",
-      image: "https://i.pravatar.cc/150?img=4", 
+      image: "https://i.pravatar.cc/150?img=70", 
       social: {
         github: "#",
         linkedin: "#",
@@ -74,7 +74,7 @@ const TeamPage = () => {
       id: 6,
       name: "Jackson White",
       role: "Product Manager",
-      bio: "Emily defines our product vision and strategy. She works closely with engineering, design, and stakeholders to identify market needs, prioritize features, and guide products from conception to launch, ensuring they meet user demands and business goals.",
+      bio: "Jackson defines our product vision and strategy. She works closely with engineering, design, and stakeholders to identify market needs, prioritize features, and guide products from conception to launch, ensuring they meet user demands and business goals.",
       image: "https://i.pravatar.cc/150?img=13", 
       social: {
         github: "#",

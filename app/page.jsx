@@ -26,7 +26,8 @@ const HomePage = () => {
   return (
     <>
       <div className="hero-section">
-        <h1>🚀 Welcome To Traversy Media</h1>
+        <h1>
+          🚀 Welcome To Traversy Media</h1>
         <p className="hero-subtitle">
           Master modern web development with our comprehensive courses and tutorials
         </p>
