@@ -1,98 +1,221 @@
 .aboutContainer {
-  padding: 2rem 0;
+  padding: 4rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .aboutHeader {
-  margin-bottom: 2.5rem;
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.aboutHeader h1 {
+  font-size: 3.5rem;
+  color: var(--text-heading);
+  margin-bottom: 1rem;
+}
+
+.divider {
+  height: 6px;
+  width: 80px;
+  background: var(--gradient-primary);
+  margin: 0 auto 2rem auto;
+  border-radius: 3px;
+  opacity: 0.8;
 }
 
 .aboutContent {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
+  grid-template-columns: 1.2fr 1fr; 
+  gap: 4rem;
+  align-items: flex-start; 
 }
 
 .aboutText {
   color: var(--text-primary);
+  line-height: 1.8;
 }
 
-.divider {
-  height: 4px;
-  width: 60px;
-  background: var(--gradient-primary);
-  margin-bottom: 2rem;
+.aboutText h2 {
+  font-size: 2.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.aboutText h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--primary-color);
   border-radius: 2px;
+}
+
+.aboutText p {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
 }
 
 .valuesGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
 .valueCard {
   background: var(--background-card);
-  padding: 1.5rem;
-  border-radius: 12px;
+  padding: 2rem;
+  border-radius: 16px;
   border: 1px solid var(--border-color);
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  box-shadow: var(--shadow-sm);
 }
 
 .valueCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.valueCard h3 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+}
+
+.valueCard p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+
+
+.servicesGridContainer {
+    padding: 2rem; 
+    background: var(--background-card); 
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.servicesGridContainer h2 {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.servicesGridContainer h2::after {
+  content: '';
+  position: absolute;
+  left: 50%; 
+  transform: translateX(-50%); 
+  bottom: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+  gap: 1.5rem; 
+  width: 100%;
+}
+
+.serviceCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgb(40, 37, 56); 
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  text-align: center;
+  height: 100%; 
+}
+
+.serviceCard:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-md);
   border-color: var(--primary-color);
 }
 
-.aboutImageContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.serviceCard h3 {
+  font-size: 1.25rem; 
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
 }
 
-.aboutImage {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.serviceCard p {
+  font-size: 0.95rem; 
+  color: var(--text-secondary);
 }
 
-.animateFloat {
-  animation: float 6s ease-in-out infinite;
-}
 
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-/* Responsive Styles */
 @media (max-width: 1024px) {
   .aboutContent {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;
   }
   
-  .aboutImageContainer {
-    order: -1;
+  .servicesGridContainer {
+    order: -1; 
+    margin-bottom: 2rem;
+  }
+
+  .aboutHeader h1 {
+    font-size: 3rem;
+  }
+
+  .aboutText h2 {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 768px) {
+  .aboutContainer {
+    padding: 3rem 1.5rem;
+  }
+
   .valuesGrid {
     grid-template-columns: 1fr;
+  }
+
+  .valueCard {
+    padding: 1.5rem;
+  }
+
+  .aboutHeader h1 {
+    font-size: 2.5rem;
+  }
+  
+  .aboutText h2 {
+    font-size: 1.8rem;
+  }
+
+  .aboutText p {
+    font-size: 1rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
+  }
+
+  .serviceCard {
+      padding: 1rem;
   }
 }
 
@@ -108,5 +231,17 @@
   
   .valueCard {
     padding: 1rem;
+  }
+
+  .aboutHeader h1 {
+    font-size: 2rem;
+  }
+
+  .aboutText h2 {
+    font-size: 1.5rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr; 
   }
 }
