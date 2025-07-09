@@ -1,0 +1,156 @@
+.codeContainer {
+  padding: 2rem 0;
+}
+
+.codeHeader {
+  margin-bottom: 2rem;
+}
+
+.divider {
+  height: 4px;
+  width: 60px;
+  background: var(--gradient-primary);
+  margin-bottom: 2rem;
+  border-radius: 2px;
+}
+
+.repoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.repoCard {
+  background: var(--background-card);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.repoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
+}
+
+.repoLink {
+  padding: 1.5rem;
+  display: block;
+  height: 100%;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.repoHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.repoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--background-secondary);
+  border-radius: 8px;
+  color: var(--primary-color);
+}
+
+.repoTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.repoDescription {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 4.5em;
+}
+
+.repoStats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.statIcon {
+  color: var(--primary-color);
+}
+
+.repoLanguage {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.languageDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+.languageDot.javascript {
+  background: #f1e05a;
+}
+
+.languageDot.typescript {
+  background: #2b7489;
+}
+
+.languageDot.html {
+  background: #e34c26;
+}
+
+.languageDot.css {
+  background: #563d7c;
+}
+
+.languageDot.python {
+  background: #3572A5;
+}
+
+@media (max-width: 768px) {
+  .repoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .codeHeader {
+    text-align: center;
+  }
+  
+  .divider {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .repoLink {
+    padding: 1rem;
+  }
+} 
