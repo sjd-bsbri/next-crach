@@ -1,167 +1,6 @@
-// import React from "react";
-// import Image from "next/image";
-// import styles from "./about.module.css";
-
-// export const metadata = {
-//   title: "About Us | Next.js Project",
-//   description: "Learn about our mission and values",
-// };
-
-// const AboutPage = () => {
-//   return (
-//     <div className={styles.aboutContainer}>
-//       <div className={styles.aboutHeader}>
-//         <h1 className="text-4xl font-bold mb-6">About Us</h1>
-//         <div className={styles.divider}></div>
-//       </div>
-      
-//       <div className={styles.aboutContent}>
-//         <div className={styles.aboutText}>
-//           <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
-//           <p className="mb-6 text-lg">
-//             We're dedicated to empowering developers with cutting-edge tools and knowledge to build 
-//             exceptional web experiences. Our platform serves as a bridge between innovation and practical
-//             implementation, making complex concepts accessible to everyone.
-//           </p>
-          
-//           <h2 className="text-2xl font-semibold mb-4">What We Do</h2>
-//           <p className="mb-6 text-lg">
-//             We provide comprehensive resources, tutorials, and ready-to-use components that help
-//             developers create modern, responsive, and performant web applications. Our focus is on
-//             Next.js and React ecosystems, but our principles apply across the web development spectrum.
-//           </p>
-          
-//           <div className={styles.valuesGrid}>
-//             <div className={styles.valueCard}>
-//               <h3 className="text-xl font-medium mb-2">Innovation</h3>
-//               <p>We constantly explore new technologies and approaches to stay at the forefront of web development.</p>
-//             </div>
-//             <div className={styles.valueCard}>
-//               <h3 className="text-xl font-medium mb-2">Accessibility</h3>
-//               <p>We believe great web experiences should be accessible to everyone, regardless of ability.</p>
-//             </div>
-//             <div className={styles.valueCard}>
-//               <h3 className="text-xl font-medium mb-2">Community</h3>
-//               <p>We foster a supportive community where developers can learn, share, and grow together.</p>
-//             </div>
-//           </div>
-//         </div>
-        
-//         <div className={styles.aboutImageContainer}>
-//           <div className={styles.aboutImage}>
-//             <Image 
-//               src="/globe.svg" 
-//               alt="Global Web Development" 
-//               width={400} 
-//               height={400} 
-//               className={styles.animateFloat}
-//             />
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AboutPage;
-
-
-
-
-
-// import React from "react";
-// import Image from "next/image";
-// import styles from "./about.module.css";
-
-// export const metadata = {
-//   title: "About Us | Next.js Project", // English title
-//   description: "Learn about our mission, values, and history.", // English description
-// };
-
-// const AboutPage = () => {
-//   return (
-//     <div className={styles.aboutContainer}>
-//       <div className={styles.aboutHeader}>
-//         <h1 className="text-4xl font-bold mb-6">About Us</h1> {/* English title */}
-//         <div className={styles.divider}></div>
-//       </div>
-      
-//       <div className={styles.aboutContent}>
-//         <div className={styles.aboutText}>
-//           <h2 className="text-2xl font-semibold mb-4">Our Mission</h2> {/* English title */}
-//           <p className="mb-6 text-lg">
-//             We're dedicated to empowering developers with cutting-edge tools and knowledge to build 
-//             exceptional web experiences. Our platform serves as a bridge between innovation and practical
-//             implementation, making complex concepts accessible to everyone. We believe in fostering a dynamic ecosystem where
-//             developers can elevate their skills and push the boundaries of what's possible on the web.
-//           </p>
-          
-//           <h2 className="text-2xl font-semibold mb-4">What We Do</h2> {/* English title */}
-//           <p className="mb-6 text-lg">
-//             We provide comprehensive resources, tutorials, and ready-to-use components that help
-//             developers create modern, responsive, and performant web applications. Our focus is on
-//             Next.js and React ecosystems, but our principles apply across the web development spectrum.
-//             Additionally, we host regular workshops and webinars to keep the community updated with the
-//             latest trends and best practices.
-//           </p>
-
-//           <h2 className="text-2xl font-semibold mb-4">Our History</h2> {/* New section */}
-//           <p className="mb-6 text-lg">
-//             This project began in 2023 with the goal of bridging the gap between theory and practice in web development.
-//             We started with a small but dedicated team and have quickly grown into a trusted resource
-//             for developers worldwide. Over the years, we've continuously refined our platform with
-//             community feedback and remain committed to delivering high-quality content.
-//           </p>
-          
-//           <div className={styles.valuesGrid}>
-//             <div className={styles.valueCard}>
-//               <h3 className="text-xl font-medium mb-2">Innovation</h3> {/* English title */}
-//               <p>We constantly explore new technologies and approaches to stay at the forefront of web development.</p> {/* English text */}
-//             </div>
-//             <div className={styles.valueCard}>
-//               <h3 className="text-xl font-medium mb-2">Accessibility</h3> {/* English title */}
-//               <p>We believe great web experiences should be accessible to everyone, regardless of ability.</p> {/* English text */}
-//             </div>
-//             <div className={styles.valueCard}>
-//               <h3 className="text-xl font-medium mb-2">Community</h3> {/* English title */}
-//               <p>We foster a supportive community where developers can learn, share, and grow together.</p> {/* English text */}
-//             </div>
-//             <div className={styles.valueCard}>
-//               <h3 className="text-xl font-medium mb-2">Quality</h3> {/* New value */}
-//               <p>We are committed to delivering the highest quality content and tools to ensure your success.</p> {/* English text */}
-//             </div>
-//           </div>
-//         </div>
-        
-//         <div className={styles.aboutImageContainer}>
-//           <div className={styles.aboutImage}>
-//             <Image 
-//               src="/globe.svg" 
-//               alt="Global Web Development" 
-//               width={400} 
-//               height={400} 
-//               className={styles.animateFloat}
-//             />
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AboutPage;
-
-
-
-
-
-// page.jsx
 import React from "react";
-// import Image from "next/image"; // No longer needed
 import styles from "./about.module.css";
 
-// You would typically import actual SVG icons or use a library like react-icons
-// For demonstration, we'll use simple div placeholders as icons.
 const IconPlaceholder = ({ children }) => (
   <div style={{ fontSize: '3rem', color: 'var(--primary-color)', marginBottom: '0.5rem' }}>
     {children}
@@ -208,7 +47,6 @@ const AboutPage = () => {
             community feedback and remain committed to delivering high-quality content.
           </p>
           
-          {/* Values Grid - remains the same */}
           <div className={styles.valuesGrid}>
             <div className={styles.valueCard}>
               <h3 className="text-xl font-medium mb-2">Innovation</h3>
@@ -229,37 +67,36 @@ const AboutPage = () => {
           </div>
         </div>
         
-        {/* NEW ICON SERVICES SECTION - replacing the image */}
         <div className={styles.servicesGridContainer}>
             <h2 className="text-2xl font-semibold mb-6">Our Core Services</h2>
             <div className={styles.servicesGrid}>
                 <div className={styles.serviceCard}>
-                    <IconPlaceholder>⚡</IconPlaceholder> {/* Placeholder icon */}
+                    <IconPlaceholder>⚡</IconPlaceholder> 
                     <h3 className="text-xl font-medium mb-2">Performance Optimization</h3>
                     <p>Enhancing speed and efficiency for lightning-fast web experiences.</p>
                 </div>
                 <div className={styles.serviceCard}>
-                    <IconPlaceholder>💡</IconPlaceholder> {/* Placeholder icon */}
+                    <IconPlaceholder>💡</IconPlaceholder> 
                     <h3 className="text-xl font-medium mb-2">Modern UI/UX Design</h3>
                     <p>Crafting intuitive and visually appealing user interfaces.</p>
                 </div>
                 <div className={styles.serviceCard}>
-                    <IconPlaceholder>🔒</IconPlaceholder> {/* Placeholder icon */}
+                    <IconPlaceholder>🔒</IconPlaceholder> 
                     <h3 className="text-xl font-medium mb-2">Secure Development</h3>
                     <p>Building robust applications with security best practices in mind.</p>
                 </div>
                 <div className={styles.serviceCard}>
-                    <IconPlaceholder>⚙️</IconPlaceholder> {/* Placeholder icon */}
+                    <IconPlaceholder>⚙️</IconPlaceholder> 
                     <h3 className="text-xl font-medium mb-2">Developer Tools</h3>
                     <p>Providing essential tools and utilities for streamlined workflows.</p>
                 </div>
                  <div className={styles.serviceCard}>
-                    <IconPlaceholder>📈</IconPlaceholder> {/* Placeholder icon */}
+                    <IconPlaceholder>📈</IconPlaceholder> 
                     <h3 className="text-xl font-medium mb-2">Scalability Solutions</h3>
                     <p>Designing architectures that grow with your project's demands.</p>
                 </div>
                  <div className={styles.serviceCard}>
-                    <IconPlaceholder>🧩</IconPlaceholder> {/* Placeholder icon */}
+                    <IconPlaceholder>🧩</IconPlaceholder> 
                     <h3 className="text-xl font-medium mb-2">Component Libraries</h3>
                     <p>Offering reusable components to accelerate development.</p>
                 </div>

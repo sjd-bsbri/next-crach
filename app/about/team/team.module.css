@@ -1,4 +1,4 @@
-.teamContainer {
+/* .teamContainer {
   padding: 2rem 0;
 }
 
@@ -104,7 +104,6 @@
   box-shadow: var(--shadow-md);
 }
 
-/* Responsive Styles */
 @media (max-width: 1024px) {
   .teamGrid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -129,5 +128,276 @@
   .memberImage {
     width: 120px;
     height: 120px;
+  }
+} */
+
+
+
+
+
+
+/* team.module.css */
+
+.teamContainer {
+  padding: 4rem 0; /* Increased padding */
+  max-width: 1200px; /* Constrain width for better readability */
+  margin: 0 auto; /* Center the container */
+}
+
+.teamHeader {
+  text-align: center;
+  margin-bottom: 4rem; /* Increased margin */
+}
+
+.teamHeader h1 {
+  font-size: 3.8rem; /* Larger heading */
+  color: var(--text-heading);
+  margin-bottom: 1.5rem; /* Increased margin */
+}
+
+.teamHeader p {
+  font-size: 1.25rem; /* Larger paragraph text */
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
+.divider {
+  height: 6px; /* Thicker divider */
+  width: 80px; /* Wider divider */
+  background: var(--gradient-primary);
+  margin-bottom: 2rem;
+  border-radius: 3px; /* Slightly more rounded */
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.8; /* Slight transparency */
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Slightly wider minmax */
+  gap: 2.5rem; /* Increased gap */
+  margin-bottom: 4rem; /* Increased margin */
+}
+
+.teamCard {
+  background: var(--background-card);
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 2.5rem; /* Increased padding */
+  text-align: center;
+  border: 1px solid var(--border-color);
+  transition: all 0.4s ease; /* Slower transition */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-sm); /* Added initial shadow */
+}
+
+.teamCard:hover {
+  transform: translateY(-12px); /* More pronounced lift */
+  box-shadow: var(--shadow-lg); /* Larger shadow on hover */
+  border-color: var(--primary-color);
+}
+
+.memberImage {
+  width: 160px; /* Larger image container */
+  height: 160px; /* Larger image container */
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.8rem; /* Adjusted margin */
+  border: 5px solid var(--primary-color); /* More prominent border, using primary color */
+  padding: 5px;
+  background: var(--background-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.profilePic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the area, cropping if necessary */
+  border-radius: 50%; /* Keep image circular */
+}
+
+.memberInfo {
+  margin-bottom: 1.8rem; /* Adjusted margin */
+}
+
+.memberInfo h2 {
+    font-size: 2rem; /* Larger name */
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.memberInfo h3 {
+    font-size: 1.15rem; /* Role font size */
+    color: var(--primary-color); /* Role color */
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.memberInfo p {
+    font-size: 1.05rem; /* Bio font size */
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.memberSocial {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem; /* Increased gap */
+  margin-top: auto; /* Pushes social links to the bottom */
+}
+
+.socialLink {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 1.1rem; /* Larger social link text */
+  transition: color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+.socialLink:hover {
+  color: var(--primary-color);
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.joinTeam {
+  background: var(--background-secondary);
+  padding: 4rem; /* Increased padding */
+  border-radius: 16px;
+  text-align: center;
+  margin-top: 3rem; /* Increased margin */
+  box-shadow: var(--shadow-md); /* Added shadow to join section */
+}
+
+.joinTeam h2 {
+    font-size: 3rem; /* Larger heading */
+    color: var(--text-heading);
+    margin-bottom: 1.5rem;
+}
+
+.joinTeam p {
+    font-size: 1.25rem; /* Larger paragraph text */
+    color: var(--text-primary);
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 1rem 2.5rem; /* Larger button padding */
+  background: var(--gradient-primary);
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: 10px; /* More rounded button */
+  font-weight: 700; /* Bolder font */
+  font-size: 1.1rem; /* Larger font size */
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.ctaButton:hover {
+  transform: translateY(-5px); /* More pronounced lift */
+  box-shadow: var(--shadow-lg); /* Larger shadow on hover */
+  background: var(--gradient-secondary); /* Optional: change gradient on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .teamContainer {
+    padding: 3rem 1.5rem;
+  }
+  .teamGrid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjusted minmax */
+    gap: 2rem;
+  }
+  .teamHeader h1 {
+    font-size: 3rem;
+  }
+  .teamHeader p {
+    font-size: 1.1rem;
+  }
+  .joinTeam {
+    padding: 3rem;
+  }
+  .joinTeam h2 {
+    font-size: 2.5rem;
+  }
+  .joinTeam p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .teamGrid {
+    grid-template-columns: 1fr; /* Stack cards on smaller tablets */
+  }
+  .teamCard {
+    padding: 2rem;
+  }
+  .memberImage {
+    width: 140px;
+    height: 140px;
+  }
+  .joinTeam {
+    padding: 2.5rem 1.5rem;
+  }
+  .joinTeam h2 {
+    font-size: 2rem;
+  }
+  .joinTeam p {
+    font-size: 1rem;
+  }
+  .ctaButton {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .teamContainer {
+    padding: 2rem 1rem;
+  }
+  .teamHeader h1 {
+    font-size: 2.5rem;
+  }
+  .teamHeader p {
+    font-size: 0.95rem;
+  }
+  .teamCard {
+    padding: 1.5rem;
+  }
+  .memberImage {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+  .memberInfo h2 {
+    font-size: 1.8rem;
+  }
+  .memberInfo h3 {
+    font-size: 1rem;
+  }
+  .memberInfo p {
+    font-size: 0.9rem;
+  }
+  .memberSocial {
+    gap: 0.8rem;
+  }
+  .socialLink {
+    font-size: 0.9rem;
+  }
+  .joinTeam {
+    padding: 2rem 1rem;
+  }
+  .joinTeam h2 {
+    font-size: 1.8rem;
+  }
+  .joinTeam p {
+    font-size: 0.95rem;
   }
 }
