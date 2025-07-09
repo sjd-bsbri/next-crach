@@ -3,8 +3,28 @@ import RepoDirs from "@/app/components/RepoDirs";
 import Link from "next/link";
 import React, { Suspense } from "react";
 
-const RepoPage = async ({ params}) => {
-  const { name } = params;
+async function fetchAllRepos() {
+  const response = await fetch(
+    "https://api.github.com/users/bradtraversy/repos",
+    {
+      next: {
+        revalidate: 60,
+      },
+    }
+  );
+  const repos = await response.json();
+  return repos;
+}
+
+export async function generateStaticParams() {
+  const repos = await fetchAllRepos(); 
+  
+  return repos.map((repo) => ({
+    name: repo.name,
+  }));
+}
+
+const RepoPage = ({ params: { name } }) => {
   return (
     <div className="card">
       <Link href="/code/repos" className="btn btn-back">

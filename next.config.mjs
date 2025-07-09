@@ -3,7 +3,7 @@ const nextConfig = {
   output: 'export', 
   basePath: '/next-crash', 
  
-    
+
 
     images: {
       unoptimized: true,
